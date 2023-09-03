@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "5a21e7ea-96eb-4c5a-b6d6-a0ad7c7b9c2e",
+		"name": "finFloh",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/email/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"email",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send_email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender\": \"test_sender@example.com\",\n    \"receiver\": \"test_receiver@example.com\",\n    \"subject\": \"Test Subject\",\n    \"body\": \"This is a test email body.\",\n    \"mail_provider\": \"Mailgun\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/email/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"email",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read_email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/email/read/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"email",
+						"read",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
